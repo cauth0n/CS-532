@@ -16,5 +16,8 @@ public class DFT {
 	public void setIndex(int index, int value) {
 		y.add(index, value);
 	}
+	public int getIndex(int index){
+		return y.get(index);
+	}
 
 }
