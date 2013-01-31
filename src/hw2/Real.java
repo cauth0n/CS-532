@@ -11,8 +11,19 @@ public class Real extends Coefficient {
 		this.a = a;
 	}
 
-	public void setValue(int a) {
-		this.a = a;
+	@Override
+	public Object getValue() {
+		return a;
+	}
+
+	@Override
+	public void setValue(Object value) {
+		try{
+			this.a = (int) value;
+		}catch(Exception e){
+			System.out.println("Error trying to set the value in Real");
+		}
+		
 	}
 
 }
